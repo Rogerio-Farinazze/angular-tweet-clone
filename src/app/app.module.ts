@@ -9,6 +9,10 @@ import { TweetComponent } from './components/tweet/tweet.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FileNotFoundComponent } from './pages/file-not-found/file-not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
+
+import { MessagesService } from './services/messages.service';
+import { AvatarComponent } from './components/avatar/avatar.component'
 
 @NgModule({
   declarations: [
@@ -18,13 +22,17 @@ import { FooterComponent } from './components/footer/footer.component';
     TweetComponent,
     HomeComponent,
     FileNotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    MessagesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,9 @@
 <app-header [title]="titleHome"></app-header>
-<app-post class="m-12"></app-post>
-<app-tweet></app-tweet>
+<div class="flex justify-center items-center mx-auto my-6 container w-full">
+  <app-post></app-post>
+</div>
+<div *ngFor="let twMessage of tweets" class="flex flex-col justify-center items-center mx-auto my-2 container w-full">
+  <app-tweet [TweetMessage]=twMessage ></app-tweet>
+</div>
 <app-footer></app-footer>
 
